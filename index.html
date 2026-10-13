@@ -1,67 +1,459 @@
-<!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>秋の日本語 — интерактивный урок N5</title><style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Nunito:wght@400;600;700;800&display=swap');
-:root{--ink:#41352d;--muted:#76665a;--paper:#fffaf0;--cream:#fff5e7;--orange:#bc582d;--orange2:#e58d4e;--gold:#edbb62;--green:#667755;--border:#e9d9c5;--shadow:0 16px 50px #5b3b2520}*{box-sizing:border-box}body{margin:0;background:#f6ead8;color:var(--ink);font-family:Nunito,'Noto Sans JP',system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.jp{font-family:'Noto Sans JP',system-ui,sans-serif}.top{background:#fff9efd9;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}.bar{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 22px}.brand{font-weight:800;color:#813c24}.brand small{font-weight:600;color:var(--muted);font-size:11px;display:block}.progress{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800}.track{width:130px;height:9px;border-radius:20px;background:#e8d6bb;overflow:hidden}.fill{background:linear-gradient(90deg,#d37b3e,#82935d);height:100%;width:0;transition:.4s}.shell{max-width:1150px;margin:auto;padding:24px 22px 70px}.hero{background:linear-gradient(110deg,#402e28aa,#402e2825),radial-gradient(circle at 76% 12%,#ffdb7a 0,#df8d3c 28%,#a24c30 64%,#633b33 100%);border-radius:26px;min-height:300px;color:#fff9ec;position:relative;overflow:hidden;box-shadow:var(--shadow);padding:48px 55px;display:flex;align-items:center}.hero:before{content:'🍁';position:absolute;font-size:170px;right:70px;top:-25px;transform:rotate(-19deg);filter:drop-shadow(10px 12px 10px #40231555)}.hero:after{content:'🍂';position:absolute;font-size:100px;right:270px;bottom:-30px;transform:rotate(25deg)}.hero>div{z-index:1;max-width:610px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}.hero h1{font-family:'Noto Sans JP',sans-serif;font-size:clamp(42px,6vw,74px);margin:10px 0 2px}.hero h2{font-size:23px;margin:0 0 12px}.hero p{line-height:1.65;color:#fff2dc}.pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.pill{background:#fff8ee25;border:1px solid #fff8ee77;padding:8px 12px;border-radius:25px;font-size:12px;font-weight:800}.layout{display:grid;grid-template-columns:220px 1fr;gap:24px;margin-top:25px}.side{position:sticky;top:82px;align-self:start;border:1px solid var(--border);background:var(--paper);border-radius:19px;padding:14px}.side h3{font-size:12px;color:var(--muted);letter-spacing:1px;margin:7px 10px 12px;text-transform:uppercase}.navbtn{display:flex;width:100%;border:0;background:transparent;color:var(--ink);text-align:left;align-items:center;gap:10px;border-radius:12px;padding:12px 10px;margin:3px 0;font-size:13px;font-weight:800}.navbtn:hover,.navbtn.active{background:#f6dec1;color:#873d20}.navbtn span{font-size:18px}.main{min-width:0}.panel{background:var(--paper);border:1px solid var(--border);border-radius:22px;padding:30px;box-shadow:0 3px 22px #6441260c;margin-bottom:20px}.section{display:none}.section.active{display:block;animation:up .3s ease}@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.sectionHead{display:flex;justify-content:space-between;gap:12px;align-items:center}.kicker{color:var(--orange);font-size:12px;letter-spacing:1px;font-weight:800;text-transform:uppercase}.section h2{font-family:'Noto Sans JP',sans-serif;font-size:29px;line-height:1.4;margin:8px 0}.intro{color:var(--muted);line-height:1.7}.btn{background:var(--orange);border:1px solid var(--orange);color:white;border-radius:12px;padding:11px 17px;font-weight:800;transition:.15s;box-shadow:none}.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}.btn.alt{background:#fff8ee;color:#87472f;border-color:#d9b997}.btn.green{background:var(--green);border-color:var(--green)}.btn.sm{padding:7px 10px;font-size:12px}.buttonRow{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}.mini{font-size:12px;color:var(--muted)}.cardVisual{background:linear-gradient(140deg,#f9dbb6,#f6eee0);min-height:235px;border-radius:18px;border:2px dashed #ddba8d;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:10px;cursor:pointer;margin:15px 0;transition:transform .2s}.cardVisual:hover{transform:scale(1.01)}.cardVisual .emoji{font-size:63px}.cardVisual .term{font-size:34px;font-weight:800}.cardVisual .meaning{font-size:15px;color:var(--muted)}.columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.statline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.chip{border-radius:25px;padding:6px 12px;font-size:12px;font-weight:800;background:#f4e5cc;color:#814d2f}.option{display:block;width:100%;text-align:left;border:1px solid var(--border);background:#fffdf8;border-radius:12px;padding:13px 15px;margin:9px 0;color:var(--ink);font-weight:700}.option:hover:not(:disabled){border-color:#c98555;background:#fff4e8}.option.correct{border-color:#739263;background:#edf6e9;color:#375b2c}.option.wrong{border-color:#ba6652;background:#fff0e9;color:#8c3b2b}.notice{padding:13px 15px;background:#f9ead7;border:1px solid #ebd3b1;border-radius:12px;margin:12px 0;line-height:1.6}.notice.success{background:#eaf3df;border-color:#b9d49e}.notice.error{background:#ffede6;border-color:#e2afa1}.wordbank{display:flex;gap:8px;flex-wrap:wrap;padding:18px;background:#f4e8d5;border-radius:13px;min-height:65px}.word{border:1px solid #d6b698;background:#fffaf0;border-radius:10px;padding:8px 13px;color:#603e2e;font-weight:800}.answerline{display:flex;gap:7px;flex-wrap:wrap;border:2px dashed #dfc2a2;border-radius:13px;min-height:67px;padding:11px;margin:13px 0;align-items:center}.gridpair{display:grid;grid-template-columns:1fr 1fr;gap:9px}.pair{background:#fffcf5;border:1px solid #dfc4a6;border-radius:12px;padding:13px 8px;min-height:54px}.pair.selected{background:#f5dbb8;border-color:#b96830}.pair.matched{background:#eaf3df;border-color:#94b380;opacity:.65}.reading{background:#f5ebda;border-radius:15px;padding:23px;line-height:2.2;font-size:17px}.reading p{margin:3px 0}.formLabel{display:block;font-size:13px;font-weight:800;margin:12px 0 7px}.control{width:100%;border-radius:12px;padding:12px 13px;background:#fffdf6;border:1px solid #dcc9af;color:var(--ink)}.result{border:1px solid #dbc3a7;border-radius:18px;padding:24px;background:#fff7e9;text-align:center}.bigNum{font-size:62px;font-weight:800;color:var(--orange);line-height:1.2}.footer{text-align:center;font-size:12px;color:#86725d;padding-top:25px}.divider{height:1px;background:var(--border);margin:21px 0}.tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.tag{padding:5px 9px;border-radius:8px;background:#efe4cf;font-size:12px}.hidden{display:none!important}@media(max-width:760px){.shell{padding:14px 12px 40px}.hero{padding:30px 23px;min-height:250px}.hero:before{right:-55px;font-size:135px;opacity:.65}.hero:after{right:95px;opacity:.65}.layout{grid-template-columns:1fr;gap:13px;margin-top:14px}.side{position:static;display:flex;overflow:auto;gap:6px;white-space:nowrap;padding:8px}.side h3{display:none}.navbtn{width:auto;min-width:max-content;padding:9px}.panel{padding:18px}.columns{grid-template-columns:1fr}.track{width:70px}}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3efed">
+  <meta name="description" content="maria.hey — интерактивные уроки японского языка: эстетично, спокойно и с интересом.">
+  <title>maria.hey · Японский язык</title>
+  <style>
+    :root{
+      --bg:#f3efed;
+      --paper:#fbf8f6;
+      --panel:#f6f1ef;
+      --ink:#464247;
+      --muted:#7f7a81;
+      --line:#e6dede;
+      --rose:#d2b1bb;
+      --rose-deep:#bb93a0;
+      --fog:#c8c2c4;
+      --sage:#90958f;
+      --char:#615c62;
+      --accent:#877784;
+      --shadow:0 18px 40px rgba(71,58,68,.08);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.65), transparent 28%),
+        linear-gradient(180deg,#f6f2f0 0%, #f1edeb 100%);
+      color:var(--ink);
+      font:16px/1.7 system-ui,-apple-system,'Segoe UI',sans-serif;
+    }
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    button:focus-visible,a:focus-visible{outline:3px solid #c297a5;outline-offset:3px}
 
-/* maria.hey edition — softened autumn palette */
-:root{--ink:#443f39;--muted:#797169;--paper:#fdfbf7;--cream:#f7f3ed;--orange:#986c58;--orange2:#b28b75;--gold:#c5af88;--green:#78816e;--border:#e5ddd3;--shadow:0 14px 44px #51463b13}
-body{background:#eeeae3}
-.top{background:#fcfaf6e8}.brand{color:#746157}.track{background:#ded8cc}.fill{background:linear-gradient(90deg,#b18a75,#899582)}
-.hero{background:linear-gradient(110deg,#3b3733a0,#55564a58),radial-gradient(circle at 80% 14%,#d5b990 0,#b7a07f 28%,#8b786b 65%,#626a60 100%);color:#fffdf9}
-.hero p{color:#f6efe6}.pill{background:#ffffff16;border-color:#ffffff66}
-.navbtn:hover,.navbtn.active{background:#e9e0d7;color:#6a5548}
-.btn.alt{background:#f9f6f0;color:#705748;border-color:#d2c3b4}
-.cardVisual{background:linear-gradient(140deg,#e9dbca,#f4eee4);border-color:#d2c2ad}
-.chip,.tag{background:#eee6db;color:#765e4f}
-.option{background:#fffdfa}.option:hover:not(:disabled){border-color:#ab9280;background:#f5eee6}
-.notice{background:#f3eee6;border-color:#e3d9cb}.wordbank,.reading{background:#efe8de}
-.word{background:#fdfaf6;border-color:#cdbdaa;color:#605349}.answerline{border-color:#d3c5b5}
-.pair{background:#fdfaf6;border-color:#d6c7b4}.pair.selected{background:#e8d9ca;border-color:#a58870}
-.result{background:#f8f4ed;border-color:#ded3c4}.control{background:#fffdfa;border-color:#d6cbc0}
-.video-frame{position:relative;aspect-ratio:16/9;width:100%;background:linear-gradient(145deg,#827a6c,#aea290);border-radius:17px;overflow:hidden;box-shadow:0 8px 25px #504a401a}
-.video-frame iframe{width:100%;height:100%;display:block;border:0}
-.video-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:18px;color:#fffaf5}
-.video-placeholder h3{margin:0;font-size:clamp(17px,3vw,27px)}.video-placeholder p{font-size:13px;margin:0 0 8px;color:#f5eee6}
-.video-symbol{display:grid;place-items:center;width:65px;height:65px;border-radius:50%;background:#fff9; color:#655448;font-size:27px;padding-left:4px}
-.panel a{color:#866352}
-@media(max-width:760px){.video-placeholder{gap:5px}.video-symbol{width:39px;height:39px;font-size:18px}.video-placeholder p{font-size:11px}.video-placeholder .btn{padding:7px 11px}}
-</style></head><body>
-<header class="top"><div class="bar"><div class="brand">🍁 秋の日本語 <small>by maria.hey · N5</small></div><div class="progress"><span id="progressText">0 / 18 баллов</span><div class="track"><div class="fill" id="progressFill"></div></div></div></div></header>
-<div class="shell"><section class="hero"><div><div class="eyebrow">AUTUMN IN JAPAN · 日本の秋 · BY MARIA.HEY</div><h1>秋の日本語</h1><h2>Осеннее путешествие по Японии</h2><p>Учим слова, исследуем осеннюю погоду, читаем историю, собираем японские предложения и создаём свой идеальный осенний день.</p><div class="pills"><span class="pill">🍂 N5</span><span class="pill">⏱ 60–75 минут</span><span class="pill">🎮 5 форматов заданий</span><span class="pill">✓ Автопроверка</span></div></div></section>
-<div class="layout"><nav class="side"><h3>Маршрут</h3><button class="navbtn active" data-sec="welcome"><span>🏮</span>Начало</button><button class="navbtn" data-sec="cards"><span>🍁</span>Словарь</button><button class="navbtn" data-sec="weather"><span>☁️</span>Погода</button><button class="navbtn" data-sec="video"><span>🎬</span>Видео</button><button class="navbtn" data-sec="match"><span>🧩</span>Найди пару</button><button class="navbtn" data-sec="sentence"><span>✍️</span>Составь фразу</button><button class="navbtn" data-sec="reading"><span>📖</span>Чтение</button><button class="navbtn" data-sec="plan"><span>🗺️</span>Мой осенний день</button><button class="navbtn" data-sec="finish"><span>🏆</span>Результат</button></nav>
-<main class="main">
-<section class="section active" id="welcome"><div class="panel"><div class="kicker">ようこそ · Добро пожаловать</div><h2>いっしょに秋を楽しみましょう！</h2><p class="intro">Сегодня мы отправимся на прогулку по осенней Японии. Сначала повторим новые слова, затем поговорим о погоде и выполним задания, а в конце придумаем свой осенний выходной.</p><div class="columns"><div class="notice"><b>🎯 Ты научишься</b><br>Называть 12 осенних слов, описывать погоду, читать короткий рассказ и составлять простые предложения.</div><div class="notice"><b>📚 Что нужно знать</b><br>Хирагану, катакану, です, частицы は・を・で・へ, настоящее и прошедшее время глаголов.</div></div><p class="mini">Если какие-то конструкции ещё не знакомы, преподаватель поможет с ними. В викторинах можно пытаться отвечать повторно, но балл даётся только за первый верный ответ.</p><button class="btn" data-goto="cards">Начать путешествие →</button></div></section>
-<section class="section" id="cards"><div class="panel"><div class="sectionHead"><div><div class="kicker">01 · ことば</div><h2>Осенний словарь 🍂</h2></div><span class="chip" id="cardCount">1 / 12</span></div><p class="intro">Нажми на карточку, чтобы перевернуть её. Используй кнопки, чтобы слушать произношение и переходить к следующему слову.</p><div class="cardVisual" id="flashcard" role="button" tabindex="0" aria-label="Перевернуть карточку"><div class="emoji" id="cardEmoji"></div><div class="term jp" id="cardTerm"></div><div class="meaning" id="cardHint"></div></div><div class="buttonRow"><button class="btn alt" id="prevCard">← Назад</button><button class="btn alt" id="flipCard">Перевернуть ↻</button><button class="btn alt" id="speakCard">🔊 Произнести</button><button class="btn" id="nextCard">Далее →</button></div><div class="divider"></div><h3>Потренируем слова</h3><p class="mini">Ответь на 4 коротких вопроса. Баллы начисляются за ответы с первой попытки.</p><div id="vocabQuiz"></div><div class="buttonRow"><button class="btn" data-goto="weather">К следующему этапу →</button></div></div></section>
-<section class="section" id="weather"><div class="panel"><div class="kicker">02 · てんき</div><h2>Какая сегодня погода? ☀️</h2><p class="intro">В японском языке можно просто сказать <b class="jp">きょうは すずしいです。</b> — «Сегодня прохладно».</p><div class="columns"><div class="notice">☀️ <b class="jp">いい てんきです。</b><br>Хорошая погода.</div><div class="notice">🌧️ <b class="jp">あめです。</b><br>Дождь.</div><div class="notice">🍃 <b class="jp">すずしいです。</b><br>Прохладно.</div><div class="notice">❄️ <b class="jp">さむいです。</b><br>Холодно.</div></div><div class="divider"></div><h3>Проверь себя</h3><div id="weatherQuiz"></div><button class="btn" data-goto="match">Далее: найди пару →</button></div></section>
-<section class="section" id="video"><div class="panel"><div class="kicker">03 · どうが</div><h2>Осень в Японии 🎬</h2><p class="intro">Посмотрим небольшое видео об осени в Японии. Обрати внимание на знакомые слова и попробуй описать то, что увидишь, по-японски.</p><div class="video-frame" id="autumnVideo"><div class="video-placeholder"><div class="video-symbol">▶</div><h3>秋の日本 · Видео к уроку</h3><p>Видео откроется здесь с YouTube. Для просмотра нужен интернет.</p><button type="button" class="btn" id="loadVideo">▶ Смотреть видео</button></div></div><p class="mini">Если плеер не запускается, <a href="https://www.youtube.com/watch?v=cJuwdEIZVzI" target="_blank" rel="noopener noreferrer">открой видео на YouTube ↗</a>. Встраивание зависит от настроек автора видео и доступности YouTube.</p><div class="divider"></div><h3>話してみましょう · Поговорим</h3><div class="notice"><b>1. なにが みえますか。</b><br>Что ты видишь? Назови хотя бы два предмета или явления.</div><div class="notice"><b>2. こうようは きれいですか。</b><br>Красивые ли осенние листья?</div><div class="notice"><b>3. にほんの あきが すきですか。</b><br>Тебе нравится осень в Японии?</div><div class="buttonRow"><button class="btn" data-goto="match">Далее: найди пару →</button></div></div></section>
-<section class="section" id="match"><div class="panel"><div class="kicker">03 · ゲーム</div><h2>Найди пару 🧩</h2><p class="intro">Выбери японское слово слева, затем его русский перевод справа. За все шесть пар без ошибок получишь 3 балла, с ошибками — 1 балл.</p><div id="matchBoard" class="gridpair"></div><p id="matchStatus" class="mini"></p><div class="buttonRow"><button class="btn alt" id="resetMatch">Смешать заново</button><button class="btn" data-goto="sentence">Составим фразы →</button></div></div></section>
-<section class="section" id="sentence"><div class="panel"><div class="kicker">04 · ぶんぽう</div><h2>Собери предложение ✍️</h2><p class="intro">Нажимай на слова по порядку. Чтобы убрать слово, нажми на него в строке ответа.</p><div class="notice">Полезные модели: <b class="jp">こうえんへ いきます</b> — иду в парк; <b class="jp">こうえんで しゃしんを とります</b> — фотографирую в парке.</div><div id="sentenceZone"></div><button class="btn" data-goto="reading">Далее: читаем историю →</button></div></section>
-<section class="section" id="reading"><div class="panel"><div class="kicker">05 · どっかい</div><h2>Осеннее воскресенье 📖</h2><p class="intro">Прочитай текст, затем ответь на вопросы. В тексте используются знакомые конструкции Minna no Nihongo I.</p><div class="reading jp"><b>わたしの あきの にちようび</b><p>きのうは にちようびでした。</p><p>てんきは とても よかったです。</p><p>わたしは ともだちと こうえんへ いきました。</p><p>こうえんで こうようを みました。</p><p>あかい はっぱと きいろい はっぱが ありました。</p><p>とても きれいでした。</p><p>それから、カフェで コーヒーを のみました。</p><p>たのしい いちにちでした。</p></div><details class="notice"><summary style="cursor:pointer;font-weight:800">Нужна подсказка? Открыть перевод</summary><p>Вчера было воскресенье. Погода была очень хорошая. Я пошёл/пошла в парк с другом. В парке мы любовались осенними листьями. Были красные и жёлтые листья. Было очень красиво. Затем мы выпили кофе в кафе. Это был приятный день.</p></details><div id="readingQuiz"></div><button class="btn" data-goto="plan">Придумать свой день →</button></div></section>
-<section class="section" id="plan"><div class="panel"><div class="kicker">06 · かいわ</div><h2>Мой идеальный осенний день 🗺️</h2><p class="intro">Выбери место, погоду, занятие и еду. Сайт автоматически соберёт твой маленький рассказ по-японски.</p><div class="columns"><div><label class="formLabel" for="place">📍 Куда пойдём?</label><select class="control" id="place"><option value="こうえん">こうえん — парк</option><option value="やま">やま — горы</option><option value="カフェ">カフェ — кафе</option></select></div><div><label class="formLabel" for="weatherSelect">☁️ Какая погода?</label><select class="control" id="weatherSelect"><option value="すずしい">すずしい — прохладно</option><option value="さむい">さむい — холодно</option><option value="あたたかい">あたたかい — тепло</option></select></div><div><label class="formLabel" for="activity">📷 Что будем делать?</label><select class="control" id="activity"><option value="しゃしんを とります。">しゃしんを とります — фотографировать</option><option value="ほんを よみます。">ほんを よみます — читать</option><option value="おんがくを ききます。">おんがくを ききます — слушать музыку</option></select></div><div><label class="formLabel" for="food">🍠 Что будем есть?</label><select class="control" id="food"><option value="やきいも">やきいも — батат</option><option value="くり">くり — каштаны</option><option value="ケーキ">ケーキ — торт</option></select></div></div><div class="notice jp" id="storyPreview" style="white-space:pre-line;font-size:19px;line-height:2"></div><div class="buttonRow"><button class="btn alt" id="copyStory">📋 Скопировать рассказ</button><button class="btn green" id="saveStory">✓ Я составил(а) рассказ</button></div><div id="storyMessage" class="mini"></div><button class="btn" data-goto="finish" style="margin-top:18px">Посмотреть результаты →</button></div></section>
-<section class="section" id="finish"><div class="panel"><div class="kicker">おつかれさまでした！</div><h2>Путешествие завершено 🏆</h2><div class="result"><div>Твой результат</div><div class="bigNum" id="finalScore">0 / 18</div><p id="finalMessage"></p><p class="mini" id="completedCount"></p></div><div class="divider"></div><h3>Чему научились</h3><div class="tagrow"><span class="tag">🍁 12 слов об осени</span><span class="tag">☁️ Описание погоды</span><span class="tag">🧩 Лексика</span><span class="tag">✍️ Порядок слов</span><span class="tag">📖 Чтение N5</span><span class="tag">🗺️ Мини-рассказ</span></div><div class="buttonRow"><button class="btn alt" id="printResult">🖨️ Сохранить результат PDF</button><button class="btn alt" id="copyResult">📋 Скопировать результат</button><button class="btn" id="restart">Начать заново</button></div><p class="mini">Прогресс сохраняется в браузере на этом устройстве. Баллы — учебная система, не оценка JLPT. Результаты не отправляются в Yutu автоматически.</p></div></section>
-<div class="footer">🍂 秋の日本語 · Авторский интерактивный урок · maria.hey</div></main></div></div>
-<script>
-const vocab=[['🍁','あき','Осень'],['🍂','こうよう','Осенняя окраска листьев'],['🍃','はっぱ','Лист'],['☔','あめ','Дождь'],['🌬️','かぜ','Ветер'],['🌤️','てんき','Погода'],['🥶','さむい','Холодно'],['🍃','すずしい','Прохладно'],['🏞️','こうえん','Парк'],['🚶','さんぽ','Прогулка'],['🍠','やきいも','Запечённый батат'],['🌰','くり','Каштан']];
-const quizSets={vocabQuiz:[['Как по-японски «осень»?',['ふゆ','あき','はる'],1],['Что означает すずしい?',['Прохладно','Жарко','Дождливо'],0],['Как сказать «парк»?',['みせ','がっこう','こうえん'],2],['Что означает やきいも?',['Зонт','Запечённый батат','Каштан'],1]],weatherQuiz:[['Как сказать «Сегодня прохладно»?',['きょうは すずしいです。','きょうは さむいです。','きょうは あめです。'],0],['Как перевести きょうは あめです。?',['Сегодня тепло','Сегодня дождь','Сегодня ветер'],1],['Какая фраза описывает хорошую погоду?',['いい てんきです。','さむいです。','あめです。'],0]],readingQuiz:[['きのうは なんようびでしたか。',['どようび','にちようび','げつようび'],1],['どこへ いきましたか。',['こうえん','がっこう','スーパー'],0],['だれと いきましたか。',['かぞく','ひとりで','ともだち'],2],['カフェで なにを のみましたか。',['おちゃ','コーヒー','みず'],1]]};
-const sentences=[{prompt:'«Осенью я иду в парк»',parts:['こうえんへ','あきに','いきます。'],answer:['あきに','こうえんへ','いきます。']},{prompt:'«Я фотографирую в парке»',parts:['とります。','しゃしんを','こうえんで'],answer:['こうえんで','しゃしんを','とります。']},{prompt:'«Я ем батат»',parts:['やきいもを','たべます。','わたしは'],answer:['わたしは','やきいもを','たべます。']}];
-const maxScore=18;let state;try{state=JSON.parse(localStorage.getItem('autumnN5ProgressV1'))||{}}catch{state={}};if(!state.scores)state.scores={};if(!state.tried)state.tried={};const store=()=>{try{localStorage.setItem('autumnN5ProgressV1',JSON.stringify(state))}catch{};updateScore()};const score=()=>Object.values(state.scores).reduce((a,b)=>a+b,0);function updateScore(){document.getElementById('progressText').textContent=score()+' / '+maxScore+' баллов';document.getElementById('progressFill').style.width=Math.min(100,score()/maxScore*100)+'%'}function award(key,pts){if(state.scores[key]===undefined){state.scores[key]=pts;store()}};
-function go(sec){document.querySelectorAll('.section').forEach(el=>el.classList.toggle('active',el.id===sec));document.querySelectorAll('.navbtn').forEach(el=>el.classList.toggle('active',el.dataset.sec===sec));if(sec==='finish')renderResult();window.scrollTo({top:document.querySelector('.layout').getBoundingClientRect().top+window.scrollY-82,behavior:'smooth'})}document.querySelectorAll('[data-sec]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.sec)));document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.goto)));
-let card=0,flipped=false;function renderCard(){let [emoji,jp,ru]=vocab[card];document.getElementById('cardCount').textContent=`${card+1} / ${vocab.length}`;document.getElementById('cardEmoji').textContent=emoji;document.getElementById('cardTerm').textContent=flipped?ru:jp;document.getElementById('cardHint').textContent=flipped?jp:'Нажми, чтобы узнать перевод';}function flip(){flipped=!flipped;renderCard()}document.getElementById('flashcard').addEventListener('click',flip);document.getElementById('flashcard').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip()}});document.getElementById('flipCard').onclick=flip;document.getElementById('prevCard').onclick=()=>{card=(card-1+vocab.length)%vocab.length;flipped=false;renderCard()};document.getElementById('nextCard').onclick=()=>{card=(card+1)%vocab.length;flipped=false;renderCard()};document.getElementById('speakCard').onclick=()=>{if(!('speechSynthesis' in window)){alert('В этом браузере нет синтеза речи.');return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(vocab[card][1]);u.lang='ja-JP';u.rate=.83;speechSynthesis.speak(u)};renderCard();
-function renderQuiz(id){const root=document.getElementById(id);root.innerHTML='';quizSets[id].forEach((q,i)=>{let key=id+'-'+i;let outer=document.createElement('div');outer.className='notice';let heading=document.createElement('div');heading.innerHTML=`<b>${i+1}. ${q[0]}</b>`;outer.appendChild(heading);let feedback=document.createElement('div');q[1].forEach((opt,k)=>{let btn=document.createElement('button');btn.className='option';btn.textContent=opt;btn.onclick=()=>{if(state.scores[key]!==undefined){feedback.textContent='Этот вопрос уже оценён. Правильный ответ: '+q[1][q[2]];return}let good=k===q[2];if(!state.tried[key])state.tried[key]=0;if(good){award(key,state.tried[key]===0?1:0);btn.classList.add('correct');feedback.textContent=state.tried[key]===0?'✓ Правильно! +1 балл':'✓ Верно! Балл за повторную попытку не начисляется.';outer.querySelectorAll('.option').forEach(x=>x.disabled=true)}else{state.tried[key]++;store();btn.classList.add('wrong');feedback.textContent='Не совсем! Попробуй ещё раз.'}};if(state.scores[key]!==undefined){btn.disabled=true;if(k===q[2])btn.classList.add('correct')}outer.appendChild(btn)});feedback.className='mini';feedback.style.marginTop='8px';if(state.scores[key]!==undefined)feedback.textContent='✓ Завершено';outer.appendChild(feedback);root.appendChild(outer)})}Object.keys(quizSets).forEach(renderQuiz);
-const pairs=[['あき','Осень'],['あめ','Дождь'],['こうえん','Парк'],['さむい','Холодно'],['くり','Каштан'],['かぜ','Ветер']];let matched=new Set(),chosen=null,matchMistakes=0;function shuffle(a){return a.map(x=>[Math.random(),x]).sort((a,b)=>a[0]-b[0]).map(x=>x[1])}function renderMatch(){let root=document.getElementById('matchBoard');root.innerHTML='';let left=shuffle(pairs.map((p,i)=>({id:i,val:p[0],side:0}))),right=shuffle(pairs.map((p,i)=>({id:i,val:p[1],side:1})));for(let i=0;i<6;i++){[left[i],right[i]].forEach(x=>{let b=document.createElement('button');b.className='pair'+(matched.has(x.id)?' matched':'');b.textContent=x.val;b.disabled=matched.has(x.id);b.onclick=()=>{if(chosen===null){chosen=x;b.classList.add('selected')}else if(chosen.side===x.side){chosen=x;root.querySelectorAll('.selected').forEach(el=>el.classList.remove('selected'));b.classList.add('selected')}else{if(chosen.id===x.id){matched.add(x.id);chosen=null;renderMatch();if(matched.size===6){award('matching',matchMistakes===0?3:1);document.getElementById('matchStatus').textContent='✓ Все пары найдены!'}}else{matchMistakes++;chosen=null;root.querySelectorAll('.selected').forEach(el=>el.classList.remove('selected'));document.getElementById('matchStatus').textContent='Не совпало — попробуй ещё раз.'}}};root.appendChild(b)})}document.getElementById('matchStatus').textContent=matched.size===6?'✓ Все пары найдены!':`Найдено пар: ${matched.size}/6`;}document.getElementById('resetMatch').onclick=()=>{matched.clear();chosen=null;matchMistakes=0;renderMatch()};renderMatch();
-const sentenceStates=sentences.map(()=>[]);function renderSentences(){let root=document.getElementById('sentenceZone');root.innerHTML='';sentences.forEach((s,i)=>{let box=document.createElement('div');box.className='notice';box.innerHTML=`<b>${i+1}. ${s.prompt}</b>`;let answer=document.createElement('div');answer.className='answerline jp';sentenceStates[i].forEach((w,j)=>{let b=document.createElement('button');b.className='word jp';b.textContent=w;b.onclick=()=>{sentenceStates[i].splice(j,1);renderSentences()};answer.appendChild(b)});box.appendChild(answer);let bank=document.createElement('div');bank.className='wordbank';s.parts.forEach((w,j)=>{let used=sentenceStates[i].filter(x=>x===w).length;let allowed=s.parts.filter((x,k)=>k<=j&&x===w).length;if(used>=allowed)return;let b=document.createElement('button');b.className='word jp';b.textContent=w;b.onclick=()=>{sentenceStates[i].push(w);renderSentences()};bank.appendChild(b)});box.appendChild(bank);let feedback=document.createElement('div');feedback.className='mini';feedback.style.marginTop='11px';let check=document.createElement('button');check.className='btn sm';check.style.marginTop='10px';check.textContent='Проверить';check.onclick=()=>{let key='sentence'+i;if(sentenceStates[i].join('')===s.answer.join('')){feedback.textContent='✓ Правильно!';award(key,state.tried[key]?0:1)}else{feedback.textContent='Порядок пока неверный. Попробуй снова.';state.tried[key]=true;store()}};if(state.scores['sentence'+i]!==undefined){feedback.textContent='✓ Предложение пройдено';check.disabled=true}box.append(check,feedback);root.appendChild(box)})}renderSentences();
-function makeStory(){let p=document.getElementById('place').value,w=document.getElementById('weatherSelect').value,a=document.getElementById('activity').value,f=document.getElementById('food').value;return `あきに ${p}へ いきます。\nてんきは ${w}です。\n${a}\n${f}を たべます。`}function updateStory(){document.getElementById('storyPreview').textContent=makeStory()}document.querySelectorAll('#plan select').forEach(el=>el.addEventListener('change',updateStory));updateStory();document.getElementById('copyStory').onclick=async()=>{try{await navigator.clipboard.writeText(makeStory());document.getElementById('storyMessage').textContent='✓ Рассказ скопирован.'}catch{document.getElementById('storyMessage').textContent='Не удалось скопировать автоматически. Выдели текст и скопируй вручную.'}};document.getElementById('saveStory').onclick=()=>{award('story',1);document.getElementById('storyMessage').textContent='✓ Отлично! +1 балл (самостоятельное задание, без проверки содержания).'};
-function renderResult(){let s=score();document.getElementById('finalScore').textContent=s+' / '+maxScore;document.getElementById('finalMessage').textContent=s>=16?'すばらしい！ Отличная работа! 🍁':s>=11?'よくできました！ Хороший результат!':'Молодец, что учишься! Повтори слова и задания 🍂';document.getElementById('completedCount').textContent=`Завершено заданий: ${Object.keys(state.scores).length} из 16. Результат отражает первые попытки.`}document.getElementById('restart').onclick=()=>{if(confirm('Сбросить все баллы и начать урок заново?')){try{localStorage.removeItem('autumnN5ProgressV1')}catch{};location.reload()}};document.getElementById('printResult').onclick=()=>window.print();document.getElementById('copyResult').onclick=async()=>{let txt=`秋の日本語 · Осенний урок N5: ${score()} / ${maxScore} баллов`;try{await navigator.clipboard.writeText(txt);alert('Результат скопирован')}catch{alert(txt)}};updateScore();
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter: blur(16px);
+      background:rgba(251,248,246,.82);
+      border-bottom:1px solid rgba(220,210,214,.7);
+    }
+    .top{
+      max-width:1160px;margin:auto;padding:14px 28px;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    .brand{
+      display:flex;flex-direction:column;gap:1px;
+    }
+    .brand strong{
+      font:700 26px/1.1 Georgia,serif;
+      letter-spacing:-.7px;
+      color:var(--char);
+    }
+    .brand strong span{color:var(--rose-deep)}
+    .brand small{font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:24px;flex-wrap:wrap}
+    nav a{font-size:14px;color:var(--muted)}
+    nav a:hover{color:var(--accent)}
 
-// Load YouTube only after a user clicks, preserving offline lesson functionality.
-document.getElementById('loadVideo').addEventListener('click',()=>{
- const frame=document.getElementById('autumnVideo');
- const iframe=document.createElement('iframe');
- iframe.src='https://www.youtube-nocookie.com/embed/cJuwdEIZVzI?rel=0&playsinline=1';
- iframe.title='Осень в Японии — видео к уроку';
- iframe.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
- iframe.setAttribute('allowfullscreen','');
- iframe.referrerPolicy='strict-origin-when-cross-origin';
- frame.replaceChildren(iframe);
-});
-</script></body></html>
+    main{max-width:1160px;margin:auto;padding:0 28px}
+
+    .hero{
+      padding:56px 0 44px;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+      align-items:center;
+    }
+    .eyebrow{
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      color:var(--rose-deep);
+    }
+    .hero h1{
+      margin:14px 0 16px;
+      font:400 clamp(42px,6vw,74px)/1.06 Georgia,serif;
+      letter-spacing:-2px;
+      color:#4f4a50;
+    }
+    .hero h1 em{font-style:normal;color:#8c7681}
+    .hero p{
+      max-width:560px;
+      color:#726d73;
+      font-size:17px;
+      margin:0;
+    }
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .button{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 20px;border-radius:999px;border:1px solid var(--accent);
+      background:var(--accent);color:#fff;font-weight:650;font-size:14px;
+      box-shadow:0 6px 18px rgba(126,104,116,.14);
+      transition:.18s transform,.18s background,.18s border-color;
+      cursor:pointer;
+    }
+    .button:hover{transform:translateY(-1px);background:#776874}
+    .button.ghost{background:transparent;color:var(--accent)}
+    .button.ghost:hover{background:#f0e7ea}
+
+    .scene{
+      position:relative;min-height:430px;overflow:hidden;border-radius:32px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.3)),
+        linear-gradient(135deg, #d5d0d2 0%, #f2edef 26%, #d7c7cd 62%, #b9b0b4 100%);
+      border:1px solid rgba(228,220,223,.9);
+      box-shadow:var(--shadow);
+    }
+    .scene::before{
+      content:"";position:absolute;inset:0;
+      background:
+        repeating-linear-gradient(100deg, rgba(70,66,71,.05) 0 2px, transparent 2px 62px),
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.45), transparent 28%),
+        radial-gradient(circle at 78% 24%, rgba(255,255,255,.38), transparent 24%);
+      opacity:.85;
+      pointer-events:none;
+    }
+    .scene::after{
+      content:"";position:absolute;inset:0;
+      background-image:
+        radial-gradient(circle at 15% 18%, rgba(255,255,255,.75) 0 1px, transparent 1px),
+        radial-gradient(circle at 70% 26%, rgba(255,255,255,.58) 0 1.2px, transparent 1.2px),
+        radial-gradient(circle at 52% 55%, rgba(255,255,255,.58) 0 1.2px, transparent 1.2px),
+        radial-gradient(circle at 86% 70%, rgba(255,255,255,.62) 0 1.3px, transparent 1.3px),
+        radial-gradient(circle at 30% 80%, rgba(255,255,255,.55) 0 1.3px, transparent 1.3px);
+      background-size: 120px 120px, 140px 140px, 160px 160px, 180px 180px, 150px 150px;
+      opacity:.5;
+      pointer-events:none;
+    }
+    .scene-badge{
+      position:absolute;top:18px;right:18px;z-index:3;
+      font-size:11px;letter-spacing:2px;text-transform:uppercase;
+      color:#776d73;background:rgba(251,248,246,.75);
+      border:1px solid rgba(255,255,255,.7);padding:8px 12px;border-radius:999px;
+      backdrop-filter:blur(8px);
+    }
+    .umbrella{
+      position:absolute;left:8%;top:10%;width:62%;height:78%;opacity:.72;
+    }
+    .umbrella .canopy{
+      position:absolute;left:0;top:0;width:88%;height:72%;
+      border:3px solid rgba(56,50,56,.72);border-bottom:none;
+      border-radius:100% 100% 8% 8% / 100% 100% 18% 18%;
+      clip-path:polygon(0 53%,50% 0,100% 52%,95% 63%,78% 58%,60% 66%,40% 62%,22% 70%,6% 60%);
+      transform:rotate(-8deg);
+      background:linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+    }
+    .rib{position:absolute;left:42%;top:12%;width:2px;background:rgba(56,50,56,.62);transform-origin:top center}
+    .r1{height:45%;transform:rotate(-52deg)} .r2{height:50%;transform:rotate(-26deg)}
+    .r3{height:52%;transform:rotate(0deg)} .r4{height:49%;transform:rotate(26deg)}
+    .r5{height:42%;transform:rotate(50deg)}
+    .stick{
+      position:absolute;left:40%;top:30%;width:5px;height:60%;background:rgba(52,48,52,.8);
+      border-radius:12px;transform:rotate(-2deg);
+    }
+    .handle{
+      position:absolute;left:35.8%;bottom:2%;width:44px;height:54px;border:5px solid rgba(52,48,52,.82);
+      border-top:none;border-left:none;border-radius:0 0 26px 0;
+    }
+    .canal{
+      position:absolute;right:-8%;bottom:-4%;width:82%;height:45%;
+      background:linear-gradient(180deg,#9c9b9d 0%, #64676b 100%);
+      clip-path:polygon(28% 0, 100% 0, 76% 100%, 0 100%);
+      opacity:.3;
+      border-top:2px solid rgba(82,79,85,.35);
+      filter:blur(.2px);
+    }
+    .rail{
+      position:absolute;right:2%;top:12%;width:60%;height:16px;
+      background:linear-gradient(90deg,#5f5b60,#313136);
+      border-radius:20px;
+      transform:rotate(-27deg);
+      box-shadow:0 0 0 5px rgba(252,248,247,.33);
+      opacity:.68;
+    }
+    .petal{
+      position:absolute;width:18px;height:14px;border-radius:55% 45% 60% 40%;
+      background:radial-gradient(circle at 30% 25%, #f9edf2, #dab8c3 65%, #c99daa 100%);
+      opacity:.85;filter:blur(.15px);
+      box-shadow:0 1px 6px rgba(174,121,138,.18);
+    }
+    .leaf{position:absolute;width:24px;height:14px;background:linear-gradient(135deg,#879286,#556157);border-radius:80% 10% 80% 10%;opacity:.7}
+    .p1{left:17%;top:20%;transform:rotate(22deg)} .p2{left:28%;top:15%;transform:rotate(-16deg)} .p3{left:64%;top:21%;transform:rotate(40deg)}
+    .p4{left:72%;top:33%;transform:rotate(7deg)} .p5{left:23%;top:60%;transform:rotate(-35deg)} .p6{left:80%;top:68%;transform:rotate(26deg)}
+    .p7{left:59%;top:52%;transform:rotate(-12deg)} .p8{left:11%;top:75%;transform:rotate(18deg)} .p9{left:41%;top:72%;transform:rotate(31deg)}
+    .p10{left:86%;top:48%;transform:rotate(-14deg)} .p11{left:53%;top:15%;transform:rotate(22deg)} .p12{left:35%;top:35%;transform:rotate(-22deg)}
+    .l1{left:12%;top:12%;transform:rotate(54deg)} .l2{left:76%;top:76%;transform:rotate(-20deg)} .l3{left:51%;top:84%;transform:rotate(12deg)}
+
+    .section{padding:28px 0 72px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}
+    .section h2{margin:6px 0 8px;font:400 clamp(31px,4vw,46px)/1.14 Georgia,serif;letter-spacing:-.7px}
+    .section-sub{color:var(--muted);font-size:14px;max-width:540px}
+    .pills{display:flex;gap:8px;flex-wrap:wrap}
+    .filter-pill{
+      border:1px solid var(--line);background:rgba(255,255,255,.64);color:var(--muted);
+      border-radius:999px;padding:8px 16px;cursor:pointer;font-size:13px;transition:.18s;
+    }
+    .filter-pill:hover{background:#f7f0f2;color:var(--accent)}
+    .filter-pill.active,.filter-pill[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .lesson-card{
+      background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+      overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+    }
+    .cover{height:220px;position:relative;overflow:hidden}
+    .cover::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.25),rgba(255,255,255,.05))}
+    .cover.n5{
+      background:
+        radial-gradient(circle at 22% 20%, rgba(255,255,255,.4), transparent 18%),
+        linear-gradient(135deg,#dad3d3 0%, #c6b3bb 38%, #989b96 100%);
+    }
+    .cover.n4{
+      background:
+        radial-gradient(circle at 75% 20%, rgba(255,255,255,.4), transparent 18%),
+        linear-gradient(135deg,#d4cbcf 0%, #b6919a 35%, #7d8381 100%);
+    }
+    .cover .curve{
+      position:absolute;left:-8%;bottom:-14%;width:82%;height:52%;
+      background:rgba(248,244,244,.24);clip-path:polygon(0 26%, 100% 0, 88% 100%, 0 100%);
+      transform:rotate(-8deg);
+    }
+    .cover .petal-cloud{
+      position:absolute;right:-40px;top:-30px;width:200px;height:200px;border-radius:50%;
+      background:radial-gradient(circle,#ecdbe1 0%, #d1b1ba 60%, transparent 61%);
+      filter:blur(14px);opacity:.6;
+    }
+    .cover .title-ja{
+      position:absolute;left:24px;bottom:22px;z-index:2;color:#fff7fb;
+      font:400 52px/1.04 Georgia,serif;letter-spacing:-1px;text-shadow:0 2px 15px rgba(58,46,56,.22)
+    }
+    .cover small{
+      position:absolute;right:18px;top:16px;z-index:2;color:#fffafc;
+      letter-spacing:3px;font-size:11px;text-transform:uppercase;background:rgba(72,66,71,.15);padding:6px 10px;border-radius:999px
+    }
+    .content{padding:24px;display:flex;flex-direction:column;flex:1}
+    .meta{display:flex;gap:8px;align-items:center;color:var(--rose-deep);font-size:12px;font-weight:700}
+    .dot{width:4px;height:4px;border-radius:50%;background:#b99aa4}
+    .content h3{margin:12px 0 6px;font:400 30px/1.16 Georgia,serif;color:#4f4a50}
+    .content p{margin:0 0 18px;color:var(--muted);font-size:14px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+    .tag{background:#f2ebee;color:#796f75;border-radius:8px;padding:5px 10px;font-size:12px}
+    .content .button{margin-top:auto;align-self:flex-start}
+
+    .empty{
+      margin-top:14px;padding:28px;border-radius:18px;background:var(--paper);border:1px dashed var(--line);color:var(--muted)
+    }
+
+    .info{
+      display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:8px 0 84px
+    }
+    .info-card{
+      background:rgba(251,248,246,.75);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)
+    }
+    .info-card h3{margin:6px 0 10px;font:400 32px/1.18 Georgia,serif}
+    .info-card p,.info-card li{color:var(--muted)}
+    .info-card ul{margin:0;padding-left:20px}
+
+    footer{
+      border-top:1px solid var(--line);background:#ebe6e8;padding:22px 28px;color:var(--muted);font-size:13px
+    }
+    .foot{max-width:1104px;margin:auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;gap:22px;padding-top:40px}
+      .scene{min-height:340px}
+      .cards,.info{grid-template-columns:1fr}
+      .section-head{display:block}
+      .pills{margin-top:18px}
+    }
+    @media (max-width: 640px){
+      .top{padding:12px 18px}.top nav{gap:14px}
+      main{padding:0 18px}
+      .hero h1{letter-spacing:-1.4px}
+      .scene{min-height:280px;border-radius:24px}
+      .section{padding-bottom:54px}
+      .cover{height:200px}
+      .cover .title-ja{font-size:42px}
+      .brand strong{font-size:23px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <a href="./" class="brand" aria-label="maria.hey главная">
+        <strong>maria<span>.</span>hey</strong>
+        <small>interactive japanese lessons</small>
+      </a>
+      <nav aria-label="Навигация">
+        <a href="#lessons">Уроки</a>
+        <a href="#about">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">日本語を、きれいに、やさしく · study with maria.hey</div>
+        <h1>Японский язык<br>в атмосфере <em>спокойствия</em><br>и интереса.</h1>
+        <p>Небольшая библиотека интерактивных уроков: эстетичные карточки, грамматика, чтение и практика — в своём темпе и с ощущением маленького путешествия.</p>
+        <div class="actions">
+          <a class="button" href="#lessons">Выбрать урок <span aria-hidden="true">↘</span></a>
+          <a class="button ghost" href="#about">Как это работает</a>
+        </div>
+      </div>
+
+      <div class="scene" role="img" aria-label="Нежная японская эстетика: дождливое стекло, прозрачный зонт, сакура и городской канал">
+        <span class="scene-badge">maria.hey · 日本語</span>
+        <div class="umbrella">
+          <div class="canopy"></div>
+          <div class="rib r1"></div>
+          <div class="rib r2"></div>
+          <div class="rib r3"></div>
+          <div class="rib r4"></div>
+          <div class="rib r5"></div>
+          <div class="stick"></div>
+          <div class="handle"></div>
+        </div>
+        <div class="rail"></div>
+        <div class="canal"></div>
+        <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span>
+        <span class="petal p5"></span><span class="petal p6"></span><span class="petal p7"></span><span class="petal p8"></span>
+        <span class="petal p9"></span><span class="petal p10"></span><span class="petal p11"></span><span class="petal p12"></span>
+        <span class="leaf l1"></span><span class="leaf l2"></span><span class="leaf l3"></span>
+      </div>
+    </section>
+
+    <section class="section" id="lessons">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">ВЫБЕРИ СВОЙ УРОВЕНЬ</div>
+          <h2>Интерактивные уроки</h2>
+          <div class="section-sub">Сейчас доступны два тематических урока. Позже сюда можно добавить Minna no Nihongo, сезонные занятия и подборки по JLPT.</div>
+        </div>
+        <div class="pills" role="group" aria-label="Фильтр по уровню">
+          <button class="filter-pill active" type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button class="filter-pill" type="button" data-filter="N5" aria-pressed="false">N5</button>
+          <button class="filter-pill" type="button" data-filter="N4" aria-pressed="false">N4</button>
+        </div>
+      </div>
+
+      <div class="cards" id="lessonCards">
+        <article class="lesson-card" data-level="N5">
+          <div class="cover n5">
+            <div class="curve"></div>
+            <div class="petal-cloud"></div>
+            <small>lesson 01</small>
+            <div class="title-ja" lang="ja">秋の日本語</div>
+          </div>
+          <div class="content">
+            <div class="meta">N5 <span class="dot"></span> 60–75 минут</div>
+            <h3>Осень в Японии</h3>
+            <p>Лексика, простые грамматические конструкции, игры, чтение и свой маленький осенний маршрут.</p>
+            <div class="tags">
+              <span class="tag">Карточки</span>
+              <span class="tag">Грамматика</span>
+              <span class="tag">Игры</span>
+            </div>
+            <a class="button" href="autumn-n5.html">Открыть урок ↗</a>
+          </div>
+        </article>
+
+        <article class="lesson-card" data-level="N4">
+          <div class="cover n4">
+            <div class="curve"></div>
+            <div class="petal-cloud"></div>
+            <small>lesson 02</small>
+            <div class="title-ja" lang="ja">秋の小旅行</div>
+          </div>
+          <div class="content">
+            <div class="meta">N4 <span class="dot"></span> 80–100 минут</div>
+            <h3>Осеннее путешествие</h3>
+            <p>Уверенный N4: более сложная грамматика, чтение, практика и собственный план поездки по японскому осеннему маршруту.</p>
+            <div class="tags">
+              <span class="tag">Грамматика</span>
+              <span class="tag">Чтение</span>
+              <span class="tag">Практика</span>
+            </div>
+            <a class="button" href="autumn-n4.html">Открыть урок ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty" id="emptyState" hidden>Для этого уровня уроков пока нет. Позже сюда можно добавить новые занятия.</div>
+    </section>
+
+    <section class="info" id="about">
+      <div class="info-card">
+        <div class="eyebrow">О ПРОЕКТЕ</div>
+        <h3>maria.hey</h3>
+        <p>Это аккуратная библиотека интерактивных уроков японского языка: с эстетикой, спокойной подачей и заданиями, которые хочется проходить до конца.</p>
+      </div>
+      <div class="info-card">
+        <div class="eyebrow">КАК ПРОХОДИТЬ</div>
+        <h3>Маленькие шаги</h3>
+        <ul>
+          <li>Выбери уровень или тему.</li>
+          <li>Пройди лексику и грамматику.</li>
+          <li>Сделай интерактивные задания.</li>
+          <li>Сохрани результат или покажи его преподавателю.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <span>© <span id="year">2026</span> maria.hey · 日本語</span>
+      <span>С любовью к японскому языку и красивым урокам 🌸</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const filterButtons = Array.from(document.querySelectorAll('.filter-pill'));
+    const lessonCards = Array.from(document.querySelectorAll('.lesson-card'));
+    const emptyState = document.getElementById('emptyState');
+
+    function applyFilter(level){
+      let visibleCount = 0;
+
+      lessonCards.forEach(card => {
+        const cardLevel = card.getAttribute('data-level');
+        const show = level === 'all' || cardLevel === level;
+        card.hidden = !show;
+        if(show) visibleCount += 1;
+      });
+
+      emptyState.hidden = visibleCount !== 0;
+
+      filterButtons.forEach(btn => {
+        const active = btn.getAttribute('data-filter') === level;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const level = btn.getAttribute('data-filter');
+        applyFilter(level);
+      });
+    });
+
+    applyFilter('all');
+  </script>
+</body>
+</html>
