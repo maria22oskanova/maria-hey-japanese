@@ -173,6 +173,34 @@
 #lessons,#grammar-n4{scroll-margin-top:85px}
 @media(max-width:800px){.catalog-quick{grid-template-columns:1fr}}
 @media(max-width:520px){.catalog-quick{padding:22px 18px}.catalog-nav-button{align-items:flex-start;flex-direction:column;gap:5px}.catalog-nav-button span{white-space:normal}}
+
+/* maria.hey · N2 grammar collection */
+#grammar-n2{scroll-margin-top:85px}
+.n2-library{padding-top:10px}
+.n2-section-head{align-items:center}
+.n2-section-head h2{margin-bottom:10px}
+.n2-count{display:flex;align-items:center;gap:11px;background:#f4ebf0;color:#755d70;border:1px solid #e2d1db;border-radius:20px;padding:12px 20px;white-space:nowrap}
+.n2-count strong{font:400 42px/1 Georgia,serif;letter-spacing:-1px}
+.n2-count span{font-size:12px;line-height:1.45;font-weight:700}
+.n2-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.n2-card{position:relative;display:flex;flex-direction:column;min-height:375px;border-radius:23px;padding:25px 23px 21px;border:1px solid #ded1d9;background:linear-gradient(152deg,#fffafa 0%,#faf5f6 75%,#f3ecf0 100%);box-shadow:0 11px 25px #66506110;transition:transform .2s,box-shadow .2s}
+.n2-card:hover{transform:translateY(-3px);box-shadow:0 15px 29px #66506122}
+.n2-card-top{display:flex;justify-content:space-between;align-items:center;gap:9px}
+.n2-module{font-size:10px;color:#957b8a;letter-spacing:1.3px;font-weight:800}
+.n2-module strong{font:400 26px/1 Georgia,serif;vertical-align:middle;letter-spacing:0;color:#816777;margin-left:4px}
+.n2-marker{background:#f0e5eb;padding:6px 9px;color:#80677c;border-radius:9px;font-size:10px;font-weight:800;letter-spacing:.35px}
+.n2-jp{font:400 clamp(25px,2.5vw,34px)/1.3 "Noto Sans JP",sans-serif;color:#745768;margin-top:22px}
+.n2-card h3{font:400 23px/1.27 Georgia,serif;letter-spacing:-.2px;color:#514550;margin:12px 0}
+.n2-card-desc{font-size:13px;line-height:1.65;color:#82737c;margin:0 0 19px}
+.n2-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-bottom:20px}
+.n2-tags span{border-radius:6px;padding:6px 8px;background:#f4eaef;color:#805c73;font-family:"Noto Sans JP",sans-serif;font-size:11px}
+.n2-card-bottom{border-top:1px solid #e5d9df;padding-top:16px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.n2-exercises{font-size:12px;color:#967987}
+.n2-cta{display:inline-flex;justify-content:center;gap:13px;align-items:center;text-decoration:none;border-radius:999px;background:#765c6c;color:#fff;padding:10px 17px;font-weight:700;font-size:13px}
+.n2-cta:hover{background:#634b5b;color:#fff}
+.n2-footnote{font-size:13px;line-height:1.65;color:#8a7983;margin:17px 0 0}
+@media(max-width:940px){.n2-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:630px){.n2-grid{grid-template-columns:1fr}.n2-card{min-height:0}.n2-count{display:none}.n2-card h3{font-size:24px}.n2-jp{font-size:28px}}
 </style>
 </head>
 <body>
@@ -184,7 +212,7 @@
 </a>
 <nav aria-label="Навигация">
 <a href="#lessons">Уроки</a>
-<a href="#about">О проекте</a>
+<a href="#about">О проекте</a><a href="#grammar-n2">N2</a>
 </nav>
 </div>
 </header>
@@ -208,7 +236,7 @@
 </div>
 </div>
 </section>
-<section aria-label="Разделы библиотеки" class="catalog-quick"><div><span class="catalog-overline">БИБЛИОТЕКА MARIA.HEY</span><h2>Выбирай, как учиться</h2><p>Уютные истории и приключения для погружения в японский — или точечная практика грамматики для JLPT N4.</p></div><div class="catalog-buttons"><a class="catalog-nav-button" href="#lessons">🎐 Тематические уроки <span>5 уроков · N5 и N4 ↗</span></a><a class="catalog-nav-button" href="#grammar-n4">📖 文法 N4 <span>10 грамматических модулей ↗</span></a></div></section><section class="section" id="lessons">
+<section aria-label="Разделы библиотеки" class="catalog-quick"><div><span class="catalog-overline">БИБЛИОТЕКА MARIA.HEY</span><h2>Выбирай, как учиться</h2><p>Интерактивные путешествия и истории — или грамматика JLPT N4 и N2 с практикой и автопроверкой.</p></div><div class="catalog-buttons"><a class="catalog-nav-button" href="#lessons">🎐 Тематические уроки <span>5 уроков · N5 и N4 ↗</span></a><a class="catalog-nav-button" href="#grammar-n4">📖 文法 N4 <span>10 грамматических модулей ↗</span></a><a class="catalog-nav-button" href="#grammar-n2">🎓 文法 N2 <span>3 углублённых урока ↗</span></a></div></section><section class="section" id="lessons">
 <div class="section-head">
 <div>
 <div class="eyebrow">ВЫБЕРИ СВОЙ УРОВЕНЬ</div>
@@ -289,6 +317,56 @@
 <button aria-pressed="false" class="grammar-filter" data-grammar-filter="forms">Формы и сравнение</button>
 </div>
 <div class="grammar-grid" id="grammarGrid"><article class="grammar-card" data-grammar-category="foundation"><div class="grammar-card-top"><span class="grammar-number">01 / 10</span><span class="grammar-topic">Решения</span></div><h3>Решения и изменения</h3><p class="grammar-jp" lang="ja">ことにする・ことになる・ようにする・ようになる</p><p class="grammar-description">Как отличать собственное решение от обстоятельств и формирование привычки.</p><a class="grammar-link" href="grammar-n4-decisions.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="foundation"><div class="grammar-card-top"><span class="grammar-number">02 / 10</span><span class="grammar-topic">Условия</span></div><h3>Условные конструкции</h3><p class="grammar-jp" lang="ja">と・ば・たら・なら</p><p class="grammar-description">Четыре типа «если» — смысловые различия и контекст.</p><a class="grammar-link" href="grammar-n4-conditionals.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="speech"><div class="grammar-card-top"><span class="grammar-number">03 / 10</span><span class="grammar-topic">Предположения</span></div><h3>Предположения и слухи</h3><p class="grammar-jp" lang="ja">そうだ・ようだ・みたいだ・らしい</p><p class="grammar-description">Внешние признаки, слухи и уверенность в информации.</p><a class="grammar-link" href="grammar-n4-evidence.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="foundation"><div class="grammar-card-top"><span class="grammar-number">04 / 10</span><span class="grammar-topic">Действия</span></div><h3>Действия и результат</h3><p class="grammar-jp" lang="ja">ておく・てある・てしまう・てみる</p><p class="grammar-description">Подготовка, результат, завершение и попытка действия.</p><a class="grammar-link" href="grammar-n4-actions.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="foundation"><div class="grammar-card-top"><span class="grammar-number">05 / 10</span><span class="grammar-topic">Причины</span></div><h3>Цели и причины</h3><p class="grammar-jp" lang="ja">ために・ように・ので・のに</p><p class="grammar-description">Как выразить цель, объяснить причину и противопоставить события.</p><a class="grammar-link" href="grammar-n4-purpose.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="speech"><div class="grammar-card-top"><span class="grammar-number">06 / 10</span><span class="grammar-topic">Планы</span></div><h3>Планы и намерения</h3><p class="grammar-jp" lang="ja">つもり・予定・ようと思う・ほうがいい</p><p class="grammar-description">Намерения, запланированные события и советы.</p><a class="grammar-link" href="grammar-n4-plans.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="foundation"><div class="grammar-card-top"><span class="grammar-number">07 / 10</span><span class="grammar-topic">Время</span></div><h3>Время и момент действия</h3><p class="grammar-jp" lang="ja">ところ・ばかり・あいだ・うちに</p><p class="grammar-description">До, во время и после события: важные оттенки времени.</p><a class="grammar-link" href="grammar-n4-time.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="speech"><div class="grammar-card-top"><span class="grammar-number">08 / 10</span><span class="grammar-topic">Правила</span></div><h3>Разрешения и обязанности</h3><p class="grammar-jp" lang="ja">てもいい・てはいけない・なければならない・なくてもいい</p><p class="grammar-description">Что можно, нельзя, обязательно и необязательно.</p><a class="grammar-link" href="grammar-n4-permissions.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="forms"><div class="grammar-card-top"><span class="grammar-number">09 / 10</span><span class="grammar-topic">Формы</span></div><h3>Возможность и залог</h3><p class="grammar-jp" lang="ja">可能形・受身形・使役形</p><p class="grammar-description">Возможность, пассив и побудительная форма глаголов.</p><a class="grammar-link" href="grammar-n4-voices.html">Открыть урок <span aria-hidden="true">↗</span></a></article><article class="grammar-card" data-grammar-category="forms"><div class="grammar-card-top"><span class="grammar-number">10 / 10</span><span class="grammar-topic">Сравнения</span></div><h3>Сравнения и ограничения</h3><p class="grammar-jp" lang="ja">より・ほど・しか・だけ・すぎる</p><p class="grammar-description">Сравнение предметов, степень и ограничения.</p><a class="grammar-link" href="grammar-n4-comparison.html">Открыть урок <span aria-hidden="true">↗</span></a></article></div>
+</section><section aria-labelledby="grammar-n2-title" class="section n2-library" id="grammar-n2">
+<div class="section-head n2-section-head">
+<div>
+<div class="eyebrow">文法 N2 · MARIA.HEY</div>
+<h2 id="grammar-n2-title">Грамматика N2</h2>
+<p class="section-sub">Первые три урока учебника: сложные грамматические конструкции, тонкие смысловые различия и практика в контексте.</p>
+</div>
+<div aria-label="3 готовых интерактивных урока" class="n2-count"><strong>03</strong><span>готовых<br/>урока</span></div>
+</div>
+<div class="n2-grid"><article class="n2-card">
+<div class="n2-card-top">
+<span class="n2-module">LESSON <strong>01</strong></span>
+<span class="n2-marker">ВРЕМЯ</span>
+</div>
+<div class="n2-jp" lang="ja">とき・直後に</div>
+<h3>Время и внезапные события</h3>
+<p class="n2-card-desc">Официальные ситуации, неожиданные события и действия, которые следуют одно за другим.</p>
+<div class="n2-tags"><span>際に・に際して</span><span>たとたん</span><span>かと思うと</span></div>
+<div class="n2-card-bottom">
+<span class="n2-exercises">27 интерактивных заданий</span>
+<a aria-label="Открыть урок 01: Время и внезапные события" class="n2-cta" href="grammar-n2-lesson-01.html">Открыть урок <span aria-hidden="true">↗</span></a>
+</div>
+</article><article class="n2-card">
+<div class="n2-card-top">
+<span class="n2-module">LESSON <strong>02</strong></span>
+<span class="n2-marker">ПРОЦЕСС</span>
+</div>
+<div class="n2-jp" lang="ja">している・進行中</div>
+<h3>Процесс и изменения</h3>
+<p class="n2-card-desc">Как описывать происходящее сейчас, постепенное развитие и изменение ситуации.</p>
+<div class="n2-tags"><span>最中・うちに</span><span>一方だ</span><span>つつある・つつ</span></div>
+<div class="n2-card-bottom">
+<span class="n2-exercises">30 интерактивных заданий</span>
+<a aria-label="Открыть урок 02: Процесс и изменения" class="n2-cta" href="grammar-n2-lesson-02.html">Открыть урок <span aria-hidden="true">↗</span></a>
+</div>
+</article><article class="n2-card">
+<div class="n2-card-top">
+<span class="n2-module">LESSON <strong>03</strong></span>
+<span class="n2-marker">ПОСЛЕДОВАТЕЛЬНОСТЬ</span>
+</div>
+<div class="n2-jp" lang="ja">後で</div>
+<h3>После действия и условия</h3>
+<p class="n2-card-desc">Как выразить завершение одного действия до другого, новые открытия и последовательность шагов.</p>
+<div class="n2-tags"><span>てはじめて</span><span>上で・次第</span><span>て以来</span></div>
+<div class="n2-card-bottom">
+<span class="n2-exercises">27 интерактивных заданий</span>
+<a aria-label="Открыть урок 03: После действия и условия" class="n2-cta" href="grammar-n2-lesson-03.html">Открыть урок <span aria-hidden="true">↗</span></a>
+</div>
+</article></div>
+<p class="n2-footnote">Каждый модуль включает объяснения, примеры, упражнения с автопроверкой, чтение и фуригану ON/OFF.</p>
 </section>
 <section class="info" id="about">
 <div class="info-card">
